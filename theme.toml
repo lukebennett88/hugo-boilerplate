@@ -1,8 +1,8 @@
-name = "hugo-boilerplate"
+name = "hugo-boilerplate-theme"
 license = "MIT"
-licenselink = "https://github.com/lukebennett88/hugo-boilerplate/blob/master/LICENSE"
+licenselink = "https://github.com/lukebennett88/hugo-boilerplate-theme/blob/master/LICENSE"
 description = "Basic boilerplate/theme to get a Hugo site up and running quickly"
-homepage = "https://github.com/lukebennett88/hugo-boilerplate"
+homepage = "https://github.com/lukebennett88/hugo-boilerplate-theme"
 tags = []
 features = []
 min_version = "0.45"

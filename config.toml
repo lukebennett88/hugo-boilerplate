@@ -1,5 +1,6 @@
 baseURL = "/"
-title = "Hugo Boilerplate"
+title = "Luke Bennett"
+# theme = "hugo-boilerplate-theme"
 languageCode = "en-AU"
 # googleAnalytics = "UA-123-s45"
 disableKinds = ["taxonomy", "taxonomyTerm"]
@@ -8,7 +9,7 @@ pygmentsUseClasses = true
 # PygmentsStyle = "paraiso-light"
 
 [params]
-  description = "Hugo Boilerplate by Luke Bennett"
+  description = "Luke Bennett's Blog"
   language = "en-AU"
   name = "Luke Bennett"
   twitterSite = "@luke_bennett_"
@@ -16,6 +17,17 @@ pygmentsUseClasses = true
 
 [frontmatter]
   date  = [":filename", ":default"]
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "Posts"
+    url  = "/post/"
+    weight = 1
+  [[menu.main]]
+    name = "Archive"
+    url  = "/archive/"
+    weight = 2
 
 [permalinks]
   post = "/:slug/"

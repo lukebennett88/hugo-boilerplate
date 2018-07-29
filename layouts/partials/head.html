@@ -94,7 +94,7 @@
         content="#ffffff">
 
   {{ "<!-- Styles -->" | safeHTML }}
-  {{- $styles := resources.Get "scss/styles.scss" | toCSS | postCSS | minify | fingerprint }}
+  {{- $styles := resources.Get "css/styles.scss" | toCSS | postCSS | minify | fingerprint }}
   <style>
     {{ $styles.Content | safeCSS }}
   </style>

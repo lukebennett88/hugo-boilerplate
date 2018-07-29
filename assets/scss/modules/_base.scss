@@ -1,0 +1,41 @@
+html {
+  font-size: 18px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: $color-secondary;
+  color: $color-text;
+  display: flex;
+  flex-direction: column;
+  font-family: $sans;
+  height: 100vh;
+  line-height: $lh;
+}
+
+// .header__wrapper,
+.post__wrapper,
+.main__wrapper,
+.footer__wrapper {
+  margin: 0 auto;
+  max-width: calc(700px + (2 * 1.8em));
+  padding: 0 $lh;
+  width: 100%;
+}
+
+header,
+footer {
+  flex-shrink: 0;
+}
+
+#main {
+  background: $color-bg-alt;
+  flex: 1 0 auto;
+}
+
+.main__wrapper {
+  padding: $lh;
+  margin-bottom: $lh;
+}

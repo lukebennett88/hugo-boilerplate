@@ -1,0 +1,37 @@
+{
+  "version": "https://jsonfeed.org/version/1",
+  "title": "{{ .Site.Title }}",
+  "home_page_url": "{{ .Site.BaseURL }}",
+  "feed_url": "https://lukebennett.me/feed.json",
+  "description": "{{ .Site.Params.description }}",
+  "icon": "https://lukebennett.me/assets/apple-touch-icon.png",
+  "favicon": "https://lukebennett.me/assets/favicon.ico",
+  "expired": false,
+  "author": {
+    "name": "Luke Bennett",
+    "url": "https://lukebennett.me/"
+  },
+  "items": [
+    {{ $list := (where .Data.Pages "Section" "posts") }}
+    {{ $len := (len $list) }}
+
+    {{ range $index, $element := $list }}
+    {
+      "id": {{ sha1 .Title | jsonify }},
+      "title": {{ .Title | jsonify }},
+      "summary": {{ .Description | jsonify }},
+      "content_text": {{ .Content | plainify | jsonify }},
+      "content_html": {{ .Content | jsonify }},
+      "url": {{ .Permalink | jsonify }},
+      "image": "{{ .Site.BaseURL }}photos/{{ .Params.photo }}",
+      "banner_image": "{{ .Site.BaseURL }}photos/{{ .Params.photo }}",
+      "date_published": "{{ .Date.Format `Mon, 02 Jan 2006 15:04:05 -0700` | safeHTML }}",
+      "date_modified": "{{ .Date.Format `Mon, 02 Jan 2006 15:04:05 -0700` | safeHTML }}",
+      "author": {
+        "name": "Luke Bennett",
+        "url": "https://lukebennett.me/"
+      }
+    }{{ if ne (add $index 1) $len }},{{ end }}
+    {{ end }}
+  ]
+}

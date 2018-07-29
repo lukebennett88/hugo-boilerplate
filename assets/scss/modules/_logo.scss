@@ -1,0 +1,24 @@
+#logo {
+  background: $color-secondary;
+  color: $color-text-inverse;
+  fill: $color-secondary;
+  height: 100%;
+  width: 100%;
+
+  &:hover {
+    background: $color-primary;
+    color: $color-text;
+    fill: $color-primary;
+  }
+}
+
+.logo__lb {
+  color: inherit;
+  fill: currentColor;
+  transition: background-color 0.3s ease-out;
+}
+
+.logo__negative-space {
+  color: $color-text;
+  stroke: currentColor;
+}

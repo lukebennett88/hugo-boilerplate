@@ -1,0 +1,33 @@
+baseURL = "/"
+title = "Hugo Boilerplate"
+languageCode = "en-AU"
+# googleAnalytics = "UA-123-s45"
+disableKinds = ["taxonomy", "taxonomyTerm"]
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+# PygmentsStyle = "paraiso-light"
+
+[params]
+  description = "Hugo Boilerplate by Luke Bennett"
+  language = "en-AU"
+  name = "Luke Bennett"
+  twitterSite = "@luke_bennett_"
+  twitterCreator = "@luke_bennett_"
+
+[frontmatter]
+  date  = [":filename", ":default"]
+
+[permalinks]
+  post = "/:slug/"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  section = ["HTML"]
+
+[outputFormats.RSS]
+  mediatype = "application/rss"
+  baseName = "feed"
+
+[outputFormats.JSON]
+  mediatype = "application/json"
+  baseName = "feed"

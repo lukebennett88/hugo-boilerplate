@@ -30,9 +30,9 @@
     <nav class="header__nav">
       <ul class="header__list">
         {{- $currentPage := . -}}
-        {{ range .Site.Menus.nav }}
+        {{ range .Site.Menus.main }}
         <li class="header__item">
-          <a class="header__link{{if or ($currentPage.IsMenuCurrent "nav" .) ($currentPage.HasMenuCurrent "nav" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+          <a class="header__link{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
         </li>
         {{- end -}}
       </ul>

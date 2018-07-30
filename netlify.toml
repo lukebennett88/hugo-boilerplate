@@ -5,3 +5,4 @@
 [context.production.environment]
   HUGO_VERSION = "0.45"
   YARN_VERSION = "1.9.2"
+  HUGO_ENV = "production"

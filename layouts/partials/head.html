@@ -94,15 +94,20 @@
         content="#ffffff">
 
   {{ "<!-- Styles -->" | safeHTML }}
+
   {{ if ne (getenv "HUGO_ENV") "production" }}
-  {{ $styles := resources.Get "scss/styles.scss" | toCSS (dict "enableSourceMap" true) }}
-  <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
+    {{ $styles := resources.Get "scss/styles.scss" | toCSS (dict "enableSourceMap" true) }}
+    <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
   {{ else }}
-  {{ $styles := resources.Get "scss/styles.scss" | toCSS | postCSS (dict "use" "autoprefixer") | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
+    {{ $styles := resources.Get "scss/styles.scss" | toCSS | postCSS (dict "use" "autoprefixer") | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
   {{ end }}
+
+
+
   <!-- Inline style if preferred -->
-  <!-- <style>
+  <!-- {{ $styles := resources.Get "scss/styles.scss" | toCSS | postCSS (dict "use" "autoprefixer") | minify | fingerprint }}
+  <style>
     {{ $styles.Content | safeCSS }}
   </style> -->
 

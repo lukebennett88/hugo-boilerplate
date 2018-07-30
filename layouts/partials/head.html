@@ -7,7 +7,7 @@
         content="width=device-width, initial-scale=1">
   <meta name="author"
         content="{{ .Site.Params.name }} - {{ .Site.BaseURL }}">
-  {{- .Hugo.Generator }}
+  {{ .Hugo.Generator }}
 
   <title>
     {{ if eq .IsHome true }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}
@@ -94,10 +94,17 @@
         content="#ffffff">
 
   {{ "<!-- Styles -->" | safeHTML }}
-  {{- $styles := resources.Get "scss/styles.scss" | toCSS | postCSS | minify | fingerprint }}
-  <style>
+  {{ if ne (getenv "HUGO_ENV") "production" }}
+  {{ $styles := resources.Get "scss/styles.scss" | toCSS (dict "enableSourceMap" true) }}
+  <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
+  {{ else }}
+  {{ $styles := resources.Get "scss/styles.scss" | toCSS | postCSS (dict "use" "autoprefixer") | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
+  {{ end }}
+  <!-- Inline style if preferred -->
+  <!-- <style>
     {{ $styles.Content | safeCSS }}
-  </style>
+  </style> -->
 
   {{ "<!-- Google Analytics -->" | safeHTML }}
   {{- template "_internal/google_analytics.html" . }}

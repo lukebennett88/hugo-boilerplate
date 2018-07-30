@@ -19,3 +19,8 @@
 
 </body>
 </html>
+
+
+
+{{- $html := resources.Get "scss/styles.scss" | toCSS | postCSS | minify | fingerprint }}
+{{ $styles.Content | safeCSS }}

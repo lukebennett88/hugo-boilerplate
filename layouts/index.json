@@ -1,18 +1,18 @@
 {
   "version": "https://jsonfeed.org/version/1",
   "title": "{{ .Site.Title }}",
-  "home_page_url": "{{ .Site.BaseURL }}",
-  "feed_url": "https://lukebennett.me/feed.json",
+  "home_page_url": "{{ .Site.Params.url }}",
+  "feed_url": "{{ .Site.Params.url }}feed.json",
   "description": "{{ .Site.Params.description }}",
-  "icon": "https://lukebennett.me/assets/apple-touch-icon.png",
-  "favicon": "https://lukebennett.me/assets/favicon.ico",
+  "icon": "{{ .Site.Params.url }}assets/apple-touch-icon.png",
+  "favicon": "{{ .Site.Params.url }}assets/favicon.ico",
   "expired": false,
   "author": {
-    "name": "Luke Bennett",
-    "url": "https://lukebennett.me/"
+    "name": "{{ .Site.Params.author }}",
+    "url": "{{ .Site.Params.url }}"
   },
   "items": [
-    {{ $list := (where .Data.Pages "Section" "posts") }}
+    {{ $list := (where .Data.Pages "Section" "post") }}
     {{ $len := (len $list) }}
 
     {{ range $index, $element := $list }}
@@ -23,13 +23,13 @@
       "content_text": {{ .Content | plainify | jsonify }},
       "content_html": {{ .Content | jsonify }},
       "url": {{ .Permalink | jsonify }},
-      "image": "{{ .Site.BaseURL }}photos/{{ .Params.photo }}",
-      "banner_image": "{{ .Site.BaseURL }}photos/{{ .Params.photo }}",
+      "image": "{{ .Site.Params.url }}photos/{{ .Params.photo }}",
+      "banner_image": "{{ .Site.Params.url }}photos/{{ .Params.photo }}",
       "date_published": "{{ .Date.Format `Mon, 02 Jan 2006 15:04:05 -0700` | safeHTML }}",
       "date_modified": "{{ .Date.Format `Mon, 02 Jan 2006 15:04:05 -0700` | safeHTML }}",
       "author": {
-        "name": "Luke Bennett",
-        "url": "https://lukebennett.me/"
+        "name": "{{ .Site.Params.name }}",
+        "url": "{{ .Site.Params.url }}"
       }
     }{{ if ne (add $index 1) $len }},{{ end }}
     {{ end }}

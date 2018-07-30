@@ -1,26 +1,25 @@
 baseURL = "/"
-title = "Luke Bennett"
-# theme = "hugo-boilerplate-theme"
-languageCode = "en-AU"
-# googleAnalytics = "UA-123-s45"
 disableKinds = ["taxonomy", "taxonomyTerm"]
+# googleAnalytics = "UA-123-s45"
+languageCode = "en-AU"
 pygmentsCodeFences = true
-pygmentsUseClasses = true
 # PygmentsStyle = "paraiso-light"
+pygmentsUseClasses = true
+title = "Hugo Boilerplate"
 
 [params]
   description = "Luke Bennett's Blog"
   language = "en-AU"
   name = "Luke Bennett"
-  twitterSite = "@luke_bennett_"
   twitterCreator = "@luke_bennett_"
+  twitterSite = "@luke_bennett_"
+  url = "https://lukebennett.me/"
 
 [frontmatter]
   date  = [":filename", ":default"]
 
 [menu]
   [[menu.main]]
-    identifier = "about"
     name = "Posts"
     url  = "/post/"
     weight = 1
@@ -37,9 +36,9 @@ pygmentsUseClasses = true
   section = ["HTML"]
 
 [outputFormats.RSS]
-  mediatype = "application/rss"
   baseName = "feed"
+  mediatype = "application/rss"
 
 [outputFormats.JSON]
-  mediatype = "application/json"
   baseName = "feed"
+  mediatype = "application/json"

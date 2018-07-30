@@ -6,7 +6,7 @@
 
 - [ ] Set up GitHub account for client (if they don't have one already)
 - [ ] Use the 'Deploy to netlify' button — making sure to rename the newly cloned copy of the repo to something relevant to the new site you are building
-- [ ] Add yourself as a collaborator: <https://github.com/$USER/$REPO/settings/collaboration>
+- [ ] Add yourself as a collaborator: `https://github.com/<user>/<repo>/settings/collaboration`
 - [ ] Clone repo `git clone` and `cd` into it
 - [ ] Run `hugo server -D` to spin up a local dev server
 - [ ] Update baseurl, title, description, author name & Google Analytics code in `/config.yml`
@@ -23,3 +23,24 @@ This is the website for $SITE
 It is hosted on Netlify
 
 Made by [Luke Bennett](https://github.com/lukebennett88) -->
+
+This boilerplate provides the following functions;
+
+- Complies SCSS to CSS
+- Autoprefixes CSS
+- Minifies CSS
+- Netlify CMS
+- Deploy to Netlify button
+- JSON feed
+-
+
+So far it doesn't have;
+
+- PostCSS Preset Env
+- Minify HTML
+- Service workers (offline, font caching etc)
+- Source maps
+- HTTP/2
+- Concatonate & minify JS (there is no JS)
+- eslintrc files for standardised styling of code
+- Pass [Front End Checklist](https://frontendchecklist.io)

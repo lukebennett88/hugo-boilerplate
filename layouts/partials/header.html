@@ -1,7 +1,7 @@
 <header class="header">
   <div class="header__wrapper">
 
-    {{- if eq .IsHome true }}
+    {{ if eq .IsHome true }}
     <h1 class="header__logo">
       <a class="header__link header__link--logo"
          href="/">
@@ -25,16 +25,16 @@
       </a>
     </div>
     {{ "<!-- / header__logo -->" | safeHTML }}
-    {{ end -}}
+    {{ end }}
 
     <nav class="header__nav">
       <ul class="header__list">
-        {{- $currentPage := . -}}
+        {{ $currentPage := . }}
         {{ range .Site.Menus.main }}
         <li class="header__item">
           <a class="header__link{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
         </li>
-        {{- end -}}
+        {{ end }}
       </ul>
 
     </nav>

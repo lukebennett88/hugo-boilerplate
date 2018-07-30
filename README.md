@@ -26,20 +26,20 @@ Made by [Luke Bennett](https://github.com/lukebennett88) -->
 
 This boilerplate provides the following functions;
 
-- Complies SCSS to CSS
-- Autoprefixes CSS
-- Minifies CSS
-- Netlify CMS
-- Deploy to Netlify button
-- JSON feed
--
+- [ ] Complies SCSS to CSS
+- [ ] Autoprefixes CSS
+- [ ] Minifies CSS
+- [ ] Netlify CMS
+- [ ] Deploy to Netlify button
+- [ ] JSON feed
 
-So far it doesn't have;
+TODO:
 
+- Rewrite Style Sample so it's not a total rip-off of Matt Gemmell's
+- Source maps for SCSS (and JS if added)
 - PostCSS Preset Env
 - Minify HTML
 - Service workers (offline, font caching etc)
-- Source maps
 - HTTP/2
 - Concatonate & minify JS (there is no JS)
 - eslintrc files for standardised styling of code

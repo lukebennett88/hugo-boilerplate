@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-HUGO_ENV="production" hugo -d public --config config.toml,netlify.toml
+hugo
 
 html-minifier --input-dir public --output-dir public --file-ext html --collapse-whitespace
 

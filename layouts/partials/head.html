@@ -12,6 +12,7 @@
   <title>
     {{ if eq .IsHome true }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}
   </title>
+
   <meta name="description"
         content="{{ if ne .Description "" }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 
@@ -95,21 +96,8 @@
 
   {{ "<!-- Styles -->" | safeHTML }}
 
-  {{ if ne (getenv "HUGO_ENV") "production" }}
-    {{ $styles := resources.Get "scss/styles.scss" | toCSS (dict "enableSourceMap" true) }}
-    <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
-  {{ else }}
-    {{ $styles := resources.Get "scss/styles.scss" | toCSS | postCSS (dict "use" "autoprefixer") | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
-  {{ end }}
-
-
-
-  <!-- Inline style if preferred -->
-  <!-- {{ $styles := resources.Get "scss/styles.scss" | toCSS | postCSS (dict "use" "autoprefixer") | minify | fingerprint }}
-  <style>
-    {{ $styles.Content | safeCSS }}
-  </style> -->
+  {{ $styles := resources.Get "scss/styles.scss" | toCSS (dict "enableSourceMap" true) | postCSS (dict "use" "autoprefixer") | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
 
   {{ "<!-- Google Analytics -->" | safeHTML }}
   {{- template "_internal/google_analytics.html" . }}

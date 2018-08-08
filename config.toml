@@ -1,44 +1,47 @@
 baseURL = "/"
-disableKinds = ["taxonomy", "taxonomyTerm"]
+disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
 # googleAnalytics = "UA-123-s45"
 languageCode = "en-AU"
-pygmentsCodeFences = true
-# PygmentsStyle = "paraiso-light"
-pygmentsUseClasses = true
 title = "Hugo Boilerplate"
 
 [params]
-  description = "Luke Bennett's Blog"
+  description = ""
+  facebook = ""
   language = "en-AU"
-  name = "Luke Bennett"
-  twitterCreator = "@luke_bennett_"
-  twitterSite = "@luke_bennett_"
-  url = "https://lukebennett.me/"
+  name = ""
+  twitterCreator = ""
+  twitterSite = ""
+  url = ""
 
 [frontmatter]
   date  = [":filename", ":default"]
 
 [menu]
   [[menu.main]]
-    name = "Posts"
-    url  = "/post/"
+    name = "Home"
+    url  = "/"
     weight = 1
   [[menu.main]]
-    name = "Archive"
-    url  = "/archive/"
+    name = "About"
+    url  = "/about/"
     weight = 2
 
 [permalinks]
   post = "/:slug/"
 
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+  home = ["HTML"]
   section = ["HTML"]
 
-[outputFormats.RSS]
-  baseName = "feed"
-  mediatype = "application/rss"
+# For sites that have and RSS and/or JSON feed, uncomment this section, delete the [outputs] section above and remove "RSS" from "disableKinds"
+# [outputs]
+#   home = ["HTML", "RSS", "JSON"]
+#   section = ["HTML"]
 
-[outputFormats.JSON]
-  baseName = "feed"
-  mediatype = "application/json"
+# [outputFormats.RSS]
+#   mediatype = "application/rss"
+#   baseName = "feed"
+
+# [outputFormats.JSON]
+#   mediatype = "application/json"
+#   baseName = "feed"

@@ -1,14 +1,12 @@
 +++
 title = "Style Sample"
 description = "This page serves as a style sample for this site. It contains many common elements, to show how they’re displayed."
-date = 2018-07-29T19:03:57+10:00
+author = "Luke Bennett"
+date = 2018-08-08T22:31:28+10:00
+photo = "2018-08-08.jpg"
 +++
 
 ## This content was blatantly stolen from [Matt Gemmell](https://mattgemmell.com/about/style-sample/)
-
----
-
-This page serves as a style sample for this site. It contains many common elements, to show how they’re displayed.
 
 ---
 
@@ -65,3 +63,11 @@ Further paragraphs of text. And yet more text, followed by a horizontal rule.
 Further paragraphs of text. And yet more text.
 
 Further paragraphs of text. And yet more text.
+
+```js
+// Javascript code with syntax highlighting.
+var fun = function lang(l) {
+  dateformat.i18n = require("./lang/" + l);
+  return true;
+};
+```

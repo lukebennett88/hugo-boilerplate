@@ -1,0 +1,66 @@
+html {
+  font-size: 1.25em; // 20px
+}
+
+body {
+  font-family: $sans;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 1.414em 0 0.5em;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 2em; // 40px
+}
+
+h2 {
+  font-size: 1.728em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+h4 {
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-size: 0.6em;
+}
+
+small,
+.font_small {
+  font-size: 0.833em;
+}
+
+em {
+  font-weight: 300;
+}
+
+strong {
+  font-weight: 500;
+}
+
+a {
+  &::selection {
+    color: inherit;
+  }
+}
+
+blockquote {
+  font-size: 1.6em;
+  font-weight: 300;
+  font-style: italic;
+}

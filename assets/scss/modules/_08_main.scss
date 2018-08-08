@@ -1,0 +1,23 @@
+.main {
+  margin: 0 auto;
+  max-width: 40rem;
+  width: 100%;
+}
+
+.main__wrapper {
+  padding: 1rem;
+}
+
+.post__title {
+  margin-top: 0;
+}
+
+.post__list {
+  list-style: none;
+}
+
+.post__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -1,36 +1,7 @@
 {{ define "main" }}
 
-{{ "<!-- post -->" | safeHTML }}
-
-{{ if eq .Title "Archive" }}
-<h1 class="post__title"><a href="{{ .URL }}">{{ .Title }}</a></h1>
-{{ "<!-- archive -->" | safeHTML }}
-<ul class="archive">
-{{ range where .Site.Pages.ByDate.Reverse "Section" "post" }}
-{{ if ne .Kind "section" }}
-<li class="archive__item">
-  <h2 class="archive__link--wrapper">
-    <a class="archive__link"
-    href="{{ .Permalink }}"
-    title="{{ .Title }}">{{ .Title }}</a>
-  </h2>
-  <div class="archive__meta">
-    <time class="archive__date"
-    datetime="{{ dateFormat "2006-01-02" .Date }}">{{ dateFormat "01 Jan 2006" .Date }}</time>
-    <div class="archive__reading-time">~ {{ .ReadingTime }} minute read</div>
-  </div>
-</li>
-{{ end }}
-{{ end }}
-</ul>
-{{ "<!-- / archive -->" | safeHTML }}
-{{ end }}
-
-{{ if ne .Title "Archive" }}
 <h1 id="post__title"><a href="{{ .URL }}">{{ .Title }}</a></h1>
 {{ .Content }}
-{{ end }}
 
-{{ "<!-- / post -->" | safeHTML }}
 
 {{ end }}

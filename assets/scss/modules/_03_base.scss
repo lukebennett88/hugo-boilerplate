@@ -1,0 +1,35 @@
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header,
+footer {
+  flex-shrink: 0;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+main > *:first-child {
+  margin-top: 0;
+  padding-top: 1rem;
+}
+
+main p:last-child {
+  margin-bottom: 0;
+  padding-bottom: 1rem;
+}
+
+footer > *:first-child {
+  margin-top: 0;
+  padding-top: 1rem;
+}
+
+img {
+  max-width: 100%;
+}

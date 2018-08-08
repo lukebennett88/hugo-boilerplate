@@ -1,31 +1,13 @@
 <header class="header">
+
   <div class="header__wrapper">
 
-    {{ if eq .IsHome true }}
-    <h1 class="header__logo">
-      <a class="header__link header__link--logo"
-         href="/">
-         <svg id="logo" xmlns="http://www.w3.org/2000/svg" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" clip-rule="evenodd" viewBox="0 0 716 895">
-          <path class="logo__negative-space" d="M357.776 0l357.77 178.885v536.657l-357.77 178.89L0 715.542V178.885"></path>
-          <path class="logo__lb" d="M357.776 804.982l268.32-134.16v-178.89l-89.44-44.72 89.44-44.72V223.606L357.776 89.442v626.1l-178.89-89.44V178.885l-89.443 44.721v447.216l268.333 134.16z"></path>
-          <path class="logo__negative-space" d="M447.216 670.822l89.44-44.72v-89.45l-89.44-44.72v178.89zM447.216 402.492l89.44-44.721v-89.443l-89.44-44.722"></path>
-        </svg>
-        </a>
-    </h1>
-    {{ "<!-- / header__logo -->" | safeHTML }}
-    {{ else }}
     <div class="header__logo">
       <a class="header__link header__link--logo"
-         href="/">
-         <svg id="logo" xmlns="http://www.w3.org/2000/svg" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" clip-rule="evenodd" viewBox="0 0 716 895">
-          <path class="logo__negative-space" d="M357.776 0l357.77 178.885v536.657l-357.77 178.89L0 715.542V178.885"></path>
-          <path class="logo__lb" d="M357.776 804.982l268.32-134.16v-178.89l-89.44-44.72 89.44-44.72V223.606L357.776 89.442v626.1l-178.89-89.44V178.885l-89.443 44.721v447.216l268.333 134.16z"></path>
-          <path class="logo__negative-space" d="M447.216 670.822l89.44-44.72v-89.45l-89.44-44.72v178.89zM447.216 402.492l89.44-44.721v-89.443l-89.44-44.722"></path>
-        </svg>
+          href="/">
+          {{ .Site.Title }}
       </a>
     </div>
-    {{ "<!-- / header__logo -->" | safeHTML }}
-    {{ end }}
 
     <nav class="header__nav">
       <ul class="header__list">
@@ -36,8 +18,8 @@
         </li>
         {{ end }}
       </ul>
-
     </nav>
+
   </div>
-  {{ "<!-- / header__wrapper -->" | safeHTML }}
+
 </header>

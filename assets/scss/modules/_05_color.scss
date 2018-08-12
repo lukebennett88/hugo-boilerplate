@@ -1,4 +1,4 @@
-::selection {
+*::selection {
   color: $bg;
   background: $primary;
 }
@@ -22,10 +22,33 @@ h3,
 h4,
 h5 {
   color: $text;
-  margin: 1.414em 0 0.5em;
-  line-height: 1.2;
 }
 
 h5 {
   color: $primary;
+}
+
+blockquote {
+  border-color: $primary;
+  color: $text-lightest;
+}
+
+hr {
+  background: $grey-light;
+}
+
+code,
+kbd,
+samp,
+pre {
+  background-color: $bg-alt;
+  color: $text-light;
+}
+
+ins {
+  background-color: lime;
+}
+
+mark {
+  background-color: #ff0;
 }

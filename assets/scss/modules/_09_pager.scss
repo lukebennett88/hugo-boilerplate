@@ -1,0 +1,14 @@
+.pager {
+  display: flex;
+  font-weight: 700;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pager__btn--next {
+  margin-left: auto;
+}
+
+.pager__btn--prev {
+  margin-right: auto;
+}

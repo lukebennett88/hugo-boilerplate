@@ -14,10 +14,17 @@
 
 .post__list {
   list-style: none;
+  padding-left: 0;
 }
 
 .post__meta {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
+  display: flex;
+  font-size: 0.8rem;
+  justify-content: space-between;
+}
+
+.post__readingTime {
+  margin: 0;
+  padding: 0;
 }

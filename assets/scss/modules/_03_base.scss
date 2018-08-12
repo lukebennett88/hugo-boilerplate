@@ -33,3 +33,70 @@ footer > *:first-child {
 img {
   max-width: 100%;
 }
+
+hr {
+  border: none;
+  display: block;
+  height: 1px;
+}
+
+p > a {
+  font-weight: 700;
+}
+
+figure {
+  text-align: center;
+}
+
+figure:first-child {
+  margin-top: 0;
+}
+
+figure:last-child {
+  margin-bottom: 0;
+}
+
+figcaption {
+  font-size: 0.8em;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  margin: 1rem 0 2rem;
+}
+
+table pre {
+  white-space: pre-wrap;
+}
+
+th,
+td {
+  font-size: 1em;
+  padding: 0.7em;
+  border: 1px solid #e6e6e6;
+}
+
+thead tr,
+tfoot tr {
+  background-color: #f5f5f5;
+}
+
+thead th,
+thead td,
+tfoot th,
+tfoot td {
+  font-size: 0.9em;
+  padding: 0.77778em;
+}
+
+thead th code,
+thead td code,
+tfoot th code,
+tfoot td code {
+  background-color: #fff;
+}
+
+tbody tr {
+  background-color: #fff;
+}

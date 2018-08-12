@@ -46,21 +46,77 @@ small,
 }
 
 em {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 strong {
-  font-weight: 500;
-}
-
-a {
-  &::selection {
-    color: inherit;
-  }
+  font-weight: 700;
 }
 
 blockquote {
-  font-size: 1.6em;
-  font-weight: 300;
+  border-left: 0.25em solid;
+  font-size: 1em;
+  margin: 0;
+  padding: 0.25em 1em;
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-size: 0.9em;
+}
+
+code,
+kbd,
+samp {
+  border-radius: 3px;
+  line-height: 1.8;
+  padding: 0.1em 0.4em 0.2em;
+  vertical-align: baseline;
+}
+
+pre {
+  overflow: auto;
+  padding: 1em 1.2em;
+}
+
+pre code {
+  background: none;
+  font-size: 1em;
+  line-height: 1em;
+}
+
+a {
+  text-decoration: none;
+}
+
+// a:hover {
+//   border-bottom: 1px solid;
+// }
+
+abbr {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+cite {
   font-style: italic;
+}
+
+ins {
+  text-decoration: none;
+}
+
+sub,
+sup {
+  font-size: 0.8em;
+}
+
+sub {
+  vertical-align: sub;
+}
+
+sup {
+  vertical-align: super;
 }

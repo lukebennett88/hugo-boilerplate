@@ -1,28 +1,28 @@
 {{ define "main" }}
 
-<h1 class="post__title"><a href="{{ .URL }}">{{ .Page.Title }}</a></h1>
+<h1 class="page__title"><a href="{{ .URL }}">{{ .Page.Title }}</a></h1>
 
-<ul class="post__list">
 {{ range (.Paginate ( where .Data.Pages "Section" "post" ).ByDate.Reverse).Pages }}
 {{ "<!-- post -->" | safeHTML }}
-<li class="post">
-  <div class="post__meta">
-    <time class="post__date" datetime="{{ dateFormat "2006-01-02" .Date }}">
-    {{ dateFormat "02 Jan 2006" .Date }}
-    </time>
-    <div class="post__readingTime">~ {{ .ReadingTime }} minute read</div>
-  </div>
+<article class="post">
   <h1 class="post__title">
     <a class="post__url" href="{{ .Permalink }}" title="{{ .Title }}">
-    {{ .Title }}
-  </a>
-</h1>
-  <article>{{ .Content }}</article>
-</li>
+      {{ .Title }}
+    </a>
+  </h1>
+
+  <p class="post__meta">
+    <time class="post__date" datetime="{{ dateFormat "2006-01-02" .Date }}">
+      {{dateFormat "02 Jan 2006" .Date }}</time>&nbsp;&mdash;&nbsp;<span
+    class="post__readingTime">{{ .ReadingTime }} minute read</span>
+  </p>
+
+  {{ .Content }}
+
+</article>
 <hr>
 {{ "<!-- / post -->" | safeHTML }}
 {{ end }}
-</ul>
 
 {{ "<!-- pager -->" | safeHTML }}
 <div class="pager">

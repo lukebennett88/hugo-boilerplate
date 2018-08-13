@@ -1,7 +1,11 @@
+.header {
+  border-top: 0.5rem solid;
+}
+
 .header__skip {
+  left: 0;
   position: absolute;
   top: 0;
-  left: 0;
   transform: scale(0);
 }
 

@@ -1,11 +1,21 @@
 *::selection {
-  color: $bg;
   background: $primary;
+  color: $bg;
 }
 
 body {
-  background: $bg;
+  background: $primary;
   color: $text-light;
+}
+
+header,
+main,
+footer {
+  background: $bg;
+}
+
+.header {
+  border-color: $primary;
 }
 
 a {
@@ -51,4 +61,25 @@ ins {
 
 mark {
   background-color: #ff0;
+}
+
+th,
+td {
+  border-color: $grey-light;
+}
+
+thead tr,
+tfoot tr {
+  background-color: $grey-lighter;
+}
+
+thead th code,
+thead td code,
+tfoot th code,
+tfoot td code {
+  background-color: $bg;
+}
+
+tbody tr {
+  background-color: $bg;
 }

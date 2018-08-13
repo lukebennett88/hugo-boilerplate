@@ -82,7 +82,7 @@ But here's one anyway:
 
 Former members
 
-| Name              | Instruments                           |               |
+| Name              | Instruments                           | Period        |
 | ----------------- | ------------------------------------- | ------------- |
 | Alfredo Hernández | drums, percussion                     | `1998 – 1999` |
 | Nick Oliveri      | bass, co-lead and backing vocals      | `1998 – 2004` |

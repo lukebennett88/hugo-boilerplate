@@ -1,7 +1,7 @@
 [build]
-  command = "source prod.sh"
+  command = "hugo --minify"
   publish = "public"
 
 [context.production.environment]
-  HUGO_VERSION = "0.46"
+  HUGO_VERSION = "0.47"
   YARN_VERSION = "1.9.2"

@@ -3,7 +3,6 @@
   "devDependencies": {
     "autoprefixer": "^9.0.1",
     "eslint": "^5.2.0",
-    "html-minifier": "^3.5.19",
     "postcss-cli": "^6.0.0"
   }
 }

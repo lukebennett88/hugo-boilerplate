@@ -30,6 +30,8 @@ Does the margin on the top and bottom of the heading look good to you?
 
 You're not going to use this on every website, about about styling `code text`? This should be in a monospace font.
 
+#### Level 4 heading
+
 You might also want to do syntax highlighting, so here is a block of javascript for you to layout.
 
 ```js

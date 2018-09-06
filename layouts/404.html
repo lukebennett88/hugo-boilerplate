@@ -1,24 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-  {{ partial "head.html" . }}
-<body>
+{{ define "title" }}Oops!{{ end }}
 
-  {{ partial "header.html" . }}
-
-  <main id="main">
-
-    <!-- post -->
-    <article class="post">
-      <h1 class="post__title">Error 404</h1>
-
-      <p>The page you requested doesn't exist.</p>
-
-    </article>
-    <!-- / post -->
-
-  </main>
-
-  {{ partial "footer.html" . }}
-
-</body>
-</html>
+{{ define "main" }}
+<main>
+  <h1>404</h1>
+</main>
+{{ end }}

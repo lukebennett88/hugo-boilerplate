@@ -1,39 +1,4 @@
 {{ define "main" }}
-
-<h1 class="page__title"><a href="{{ .URL }}">{{ .Page.Title }}</a></h1>
-
-{{ range (.Paginate ( where .Data.Pages "Section" "post" ).ByDate.Reverse).Pages }}
-{{ "<!-- post -->" | safeHTML }}
-<article class="post">
-  <h1 class="post__title">
-    <a class="post__url" href="{{ .Permalink }}" title="{{ .Title }}">
-      {{ .Title }}
-    </a>
-  </h1>
-
-  <p class="post__meta">
-    <time class="post__date" datetime="{{ dateFormat "2006-01-02" .Date }}">
-      {{dateFormat "02 Jan 2006" .Date }}</time>&nbsp;&mdash;&nbsp;<span
-    class="post__readingTime">{{ .ReadingTime }} minute read</span>
-  </p>
-
-  {{ .Content }}
-
-</article>
-<hr>
-{{ "<!-- / post -->" | safeHTML }}
-{{ end }}
-
-{{ "<!-- pager -->" | safeHTML }}
-<div class="pager">
-{{ if eq .Paginator.HasPrev true }}
-<a href="{{ .Paginator.Prev.URL }}" class="pager__btn pager__btn--prev" title="Go to page {{ .Paginator.Prev.PageNumber }}">Previous (page {{ .Paginator.Prev.PageNumber }} of {{ .Paginator.TotalPages }})</a>
-{{ end }}
-
-{{ if eq .Paginator.HasNext true }}
-<a href="{{ .Paginator.Next.URL }}" class="pager__btn pager__btn--next" title="Go to page {{ .Paginator.Next.PageNumber }}">Next (page {{ .Paginator.Next.PageNumber }} of {{ .Paginator.TotalPages }})</a>
-{{ end }}
-</div>
-{{ "<!-- / pager -->" | safeHTML }}
-
+<h1>List page</h1>
+{{ .Content }}
 {{ end }}

@@ -1,8 +1,14 @@
 {
-  "dependencies": {},
+  "main": "index.js",
+  "scripts": {
+    "start": "hugo --gc"
+  },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^1.0.1",
     "autoprefixer": "^9.0.1",
-    "eslint": "^5.2.0",
-    "postcss-cli": "^6.0.0"
+    "postcss": "^7.0.1",
+    "postcss-cli": "^6.0.0",
+    "postcss-import": "^11.0.0",
+    "tailwindcss": "^0.6.5"
   }
 }

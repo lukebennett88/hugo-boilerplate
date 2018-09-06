@@ -1,20 +1,15 @@
-baseURL = "/"
-disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+baseurl       = "/"
+disableKinds  = ["section", "RSS", "sitemap", "robotsTXT"]
 googleAnalytics = ""
 languageCode = "en-AU"
-title = "Hugo Boilerplate"
+title         = "Site title here"
+uglyurls      = false
 
 [params]
-  description = ""
-  facebook = ""
-  language = "en-AU"
-  name = ""
-  twitterCreator = ""
+  siteDescription = "Site description here"
+  author = ""
   twitterSite = ""
-  url = ""
-
-[frontmatter]
-  date  = [":filename", ":default"]
+  twitterCreator = ""
 
 [menu]
   [[menu.main]]
@@ -25,23 +20,3 @@ title = "Hugo Boilerplate"
     name = "About"
     url  = "/about/"
     weight = 2
-
-[permalinks]
-  post = "/:slug/"
-
-[outputs]
-  home = ["HTML"]
-  section = ["HTML"]
-
-# For sites that have and RSS and/or JSON feed, uncomment this section, delete the [outputs] section above and remove "RSS" from "disableKinds"
-# [outputs]
-#   home = ["HTML", "RSS", "JSON"]
-#   section = ["HTML"]
-
-# [outputFormats.RSS]
-#   mediatype = "application/rss"
-#   baseName = "feed"
-
-# [outputFormats.JSON]
-#   mediatype = "application/json"
-#   baseName = "feed"

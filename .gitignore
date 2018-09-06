@@ -1,5 +1,32 @@
+# Ignore docs files
+_site
+.jekyll-metadata
+.ruby-version
+.vscode
+
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.log
+*.orig
+*.rej
+*.swo
+*.swp
+*.vi
+*.zip
+*~
+# *.lock
+
+# OS or Editor folders
+.asset-cache
+.cache
 .DS_Store
-.vscode/
-*.log*
+.project
+.sass-cache
+.settings
+.tmproj
+*.scssc
+Thumbs.db
+# Folders to ignore
 node_modules
 public

@@ -1,6 +1,6 @@
 baseURL = "/"
 disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
-# googleAnalytics = "UA-123-s45"
+googleAnalytics = ""
 languageCode = "en-AU"
 title = "Hugo Boilerplate"
 

@@ -1,101 +1,38 @@
 <head>
 
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible"
-        content="IE=edge">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1">
-  <meta name="author"
-        content="{{ .Site.Params.name }} - {{ .Site.BaseURL }}">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="{{ .Site.Params.name }} - {{ .Site.BaseURL }}">
   {{ .Hugo.Generator }}
 
   <title>
     {{ if eq .IsHome true }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}
   </title>
 
-  <meta name="description"
-        content="{{ if ne .Description "" }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <meta name="description" content="{{ if ne .Description "" }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 
   {{ "<!-- Open graph data -->" | safeHTML }}
-  <meta property="og:site_name"
-        content="{{ .Site.Title }}">
-  <meta property="og:title"
-        content="{{ if eq .IsHome true }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}">
-  <meta property="og:url"
-        content="{{ .URL | absURL }}">
-  <meta property="og:type"
-        content="{{ if eq .Type "page" }}website{{ else }}article{{ end }}">
-  <meta property="og:description"
-        content="{{ if ne .Description "" }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-  <meta property="og:image"
-        content="{{ if eq .Type "page" }}{{ .Site.BaseURL }}assets/logo.png{{ else }}{{ .Site.BaseURL }}img/{{ .Params.photo }}{{ end }}">
+  <meta property="og:site_name" content="{{ .Site.Title }}">
+  <meta property="og:title" content="{{ if eq .IsHome true }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}">
+  <meta property="og:url" content="{{ .URL | absURL }}">
+  <meta property="og:type" content="{{ if eq .Type "page" }}website{{ else }}article{{ end }}">
+  <meta property="og:description" content="{{ if ne .Description "" }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <meta property="og:image" content="{{ if eq .Type "page" }}{{ .Site.BaseURL }}assets/logo.png{{ else }}{{ .Site.BaseURL }}img/{{ .Params.photo }}{{ end }}">
 
   {{ "<!-- Twitter Card -->" | safeHTML }}
-  <meta name="twitter:card"
-        content="summary_large_image" />
-  <meta name="twitter:site"
-        content="{{ .Site.Params.twitterSite }}" />
-  <meta name="twitter:creator"
-        content="{{ .Site.Params.twitterCreator }}" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="{{ .Site.Params.twitterSite }}" />
+  <meta name="twitter:creator" content="{{ .Site.Params.twitterCreator }}" />
 
   {{ "<!-- Standard Stuff -->" | safeHTML }}
-  <link rel="canonical"
-        href="{{ .URL | absURL }}">
-  <link rel="alternate"
-        type="application/rss+xml"
-        title="{{ .Site.Title }}"
-        href="{{ .Site.BaseURL }}feed.xml" />
-  <link rel="alternate"
-        type="application/json"
-        title="{{ .Site.Title }}"
-        href="{{ .Site.BaseURL }}feed.json  " />
+  <link rel="canonical" href="{{ .URL | absURL }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ .Site.BaseURL }}feed.xml" />
+  <link rel="alternate" type="application/json" title="{{ .Site.Title }}" href="{{ .Site.BaseURL }}feed.json  " />
 
   {{ "<!-- Favicons -->" | safeHTML }}
-  <link rel="apple-touch-icon"
-        sizes="114x114"
-        href="/assets/apple-touch-icon-114x114.png">
-  <link rel="apple-touch-icon"
-        sizes="120x120"
-        href="/assets/apple-touch-icon-120x120.png">
-  <link rel="apple-touch-icon"
-        sizes="144x144"
-        href="/assets/apple-touch-icon-144x144.png">
-  <link rel="apple-touch-icon"
-        sizes="152x152"
-        href="/assets/apple-touch-icon-152x152.png">
-  <link rel="apple-touch-icon"
-        sizes="180x180"
-        href="/assets/apple-touch-icon-180x180.png">
-  <link rel="icon"
-        type="image/png"
-        href="/assets/favicon-16x16.png"
-        sizes="16x16">
-  <link rel="icon"
-        type="image/png"
-        href="/assets/favicon-32x32.png"
-        sizes="32x32">
-  <link rel="icon"
-        type="image/png"
-        href="/assets/android-chrome-192x192.png"
-        sizes="192x192">
-  <link rel="manifest"
-        href="/assets/manifest.json">
-  <link rel="mask-icon"
-        href="/assets/safari-pinned-tab.svg"
-        color="#5bbad5">
-  <link rel="shortcut icon"
-        href="/assets/favicon.ico">
-  <meta name="msapplication-TileColor"
-        content="#ffffff">
-  <meta name="msapplication-TileImage"
-        content="/assets/mstile-144x144.png">
-  <meta name="msapplication-config"
-        content="/assets/browserconfig.xml">
-  <meta name="theme-color"
-        content="#ffffff">
 
   {{ "<!-- Styles -->" | safeHTML }}
-
   {{ $styles := resources.Get "scss/styles.scss" | toCSS (dict "enableSourceMap" true) | postCSS (dict "use" "autoprefixer") | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-AU{{ end }}">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -40,10 +41,8 @@
   {{ end }}
 </head>
 
-<body>
-  {{ partial "nav" . }}
+<body class="antialiased">
   {{ block "main" . }}{{ end }}
-  {{ partial "footer" . }}
 </body>
 
 </html>

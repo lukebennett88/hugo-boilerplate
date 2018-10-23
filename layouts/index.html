@@ -1,7 +1,24 @@
+{{ define "head" }}
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js" async></script>
+{{ end }}
+
 {{ define "main" }}
-{{ partial "nav" . }}
-<main class="p-12 rounded-lg shadow-lg text-grey-darkest mt-auto mb-auto">
-  <h1>{{ .Site.Title }}</h1>
+<main class="max-w-md px-4 py-8 mx-auto w-full">
+  <h1>Home Page</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus tenetur ex aspernatur nihil vitae beatae, soluta consectetur dolore blanditiis neque culpa doloribus necessitatibus ad. Perferendis, maxime nobis? Doloremque, aliquid asperiores?</p>
 </main>
-{{ partial "footer" . }}
+{{ end }}
+
+{{ define "script" }}
+<script async>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 {{ end }}

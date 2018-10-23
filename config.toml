@@ -1,22 +1,27 @@
-baseurl       = "/"
-disableKinds  = ["section", "RSS", "sitemap", "robotsTXT"]
-googleAnalytics = ""
-languageCode = "en-AU"
-title         = "Site title here"
-uglyurls      = false
+baseurl           = "/"
+disableKinds      = ["RSS", "taxonomy", "taxonomyTerm"]
+languageCode      = "en-AU"
+title             = "Hugo Boilerplate"
 
 [params]
-  siteDescription = "Site description here"
-  author = ""
-  twitterSite = ""
-  twitterCreator = ""
+  siteDescription = ""
+  phone           = ""
+  email           = ""
+  facebook        = ""
+  twitter         = ""
 
 [menu]
   [[menu.main]]
-    name = "Home"
-    url  = "/"
-    weight = 1
-  [[menu.main]]
-    name = "About"
-    url  = "/about/"
-    weight = 2
+    name          = "Home"
+    url           = "/"
+    weight        = 1
+
+  # [[menu.main]]
+  #   name          = "About"
+  #   url           = "/about/"
+  #   weight        = 2
+
+  # [[menu.main]]
+  #   name          = "Posts"
+  #   url           = "/post/"
+  #   weight        = 3

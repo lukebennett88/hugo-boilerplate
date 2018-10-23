@@ -1,0 +1,18 @@
+{{- $pc := .Page.Site.Config.Privacy.Instagram -}}
+{{- $sc := .Page.Site.Config.Services.Instagram -}}
+{{- if not $pc.Disable -}}
+{{- $id := .Get 0 -}}
+{{- $item := getJSON "https://api.instagram.com/oembed/?url=https://www.instagram.com/p/" $id "/&amp;maxwidth=640&amp;omitscript=true" -}}
+{{- $hideCaption := (eq (.Get 1) "hidecaption") -}}
+{{ with $item }}
+{{- $mediaURL := printf "https://instagram.com/p/%s/" $id | safeURL -}}
+{{- if not $sc.DisableInlineCSS -}}
+{{- end -}}
+<figure class="mb-0" style="max-width: {{ $item.thumbnail_width }}px">
+  <img src="{{ $item.thumbnail_url }}" width="{{ $item.thumbnail_width }}" height="{{ $item.thumbnail_height }}" alt="">
+  <figcaption class="text-base">
+    {{ if not $hideCaption }}<p>{{ $item.title}}</p>{{ end }}
+  </figcaption>
+</figure>
+{{- end }}
+{{- end -}}

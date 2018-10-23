@@ -1,4 +1,16 @@
 {{ define "main" }}
-<h1>List page</h1>
-{{ .Content }}
+<main class="mt-8 w-screen">
+  <ul class="flex flex-wrap list-reset ml-2">
+    {{- range .Pages }}
+    <li class="flex w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 xl:w-1/6">
+      <a class="bg-white border mr-2 rounded-lg shadow-lg hover:shadow-none mb-8 p-2" href="{{ .URL }}">
+        <article>
+          <h2 class="font-serif my-2 text-grey-darkest hover:text-indigo">{{ .Title }}</h2>
+          <p>{{ .Content }}</p>
+        </article>
+      </a>
+    </li>
+    {{- end }}
+  </ul>
+</main>
 {{ end }}

@@ -1,4 +1,6 @@
 {{ define "main" }}
-<h1>Single page</h1>
-{{ .Content }}
+<main class="bg-white border rounded-lg shadow-lg max-w-md my-8 px-4 py-8 mx-auto w-full">
+  <h1><a class="text-grey-darkest hover:text-indigo" href="{{ .URL }}">{{ .Title }}</a></h1>
+  {{ .Content }}
+</main>
 {{ end }}

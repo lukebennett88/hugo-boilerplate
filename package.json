@@ -1,15 +1,24 @@
 {
-  "main": "index.js",
-  "scripts": {
-    "start": "hugo --gc --minify",
-    "develop": "hugo server -D"
+  "author": {
+    "email": "luke.bennett88@gmail.com",
+    "name": "Luke Bennett",
+    "url": "https://lukebennett.me"
   },
-  "devDependencies": {
+  "dependencies": {
     "@fullhuman/postcss-purgecss": "^1.1.0",
-    "autoprefixer": "^9.2.1",
-    "postcss": "^7.0.5",
-    "postcss-cli": "^6.0.1",
-    "postcss-import": "^12.0.1",
+    "autoprefixer": "^9.1.5",
+    "postcss": "^7.0.3",
+    "postcss-cli": "^6.0.0",
+    "postcss-import": "^12.0.0",
     "tailwindcss": "^0.6.6"
+  },
+  "description": "Get up a new Hugo site up and running quickly",
+  "license": "MIT",
+  "main": "index.js",
+  "name": "hugo-boilerplate",
+  "repository": "https://github.com/lukebennett88/hugo-boilerplate",
+  "scripts": {
+    "develop": "hugo server -D",
+    "start": "hugo --gc --minify"
   }
 }

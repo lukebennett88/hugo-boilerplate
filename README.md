@@ -5,7 +5,6 @@ This is Hugo boilerplate to get a website up and running quickly using the follo
 - Static site generator: [Hugo](https://gohugo.io)
 - Base template: [hugopipes-tailwindcss](https://github.com/budparr/hugopipes-tailwindcss)
 - CSS framework: [Tailwind](https://tailwindcss.com)
-- SVG icons: [Feather](https://feathericons.com)
 - Hosting: [Netlify](https://www.netlify.com)
 - CMS: [Netlify CMS](https://www.netlifycms.org)
 

@@ -5,3 +5,11 @@
 :focus:not(:focus-visible) {
   outline: none;
 }
+
+main a {
+  @apply font-bold;
+}
+
+a:hover {
+  @apply text-grey-darker;
+}

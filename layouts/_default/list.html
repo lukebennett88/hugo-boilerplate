@@ -4,7 +4,11 @@
     {{- range .Pages }}
     <li>
       <article>
-        <h2>{{ .Title }}</h2>
+        <h2>
+          <a href="{{ .URL }}">
+            {{- .Title -}}
+          </a>
+        </h2>
         {{ .Content }}
       </article>
     </li>

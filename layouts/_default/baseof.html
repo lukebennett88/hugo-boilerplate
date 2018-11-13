@@ -49,8 +49,8 @@
   {{- block "head" . }}{{ end }}
 </head>
 
-<body class="antialiased">
-  {{ partial "nav" . }}
+<body class="antialiased text-grey-darkest">
+  {{ partial "header" . }}
   {{ block "main" . }}{{ end }}
   {{ partial "footer" . }}
   {{- block "script" . }}{{ end }}

@@ -1,0 +1,22 @@
+<header class="flex">
+  <nav class="nav w-full z-10">
+    <a href="/" class="logo block float-left font-bold no-underline">
+      {{ .Site.Title }}
+    </a>
+
+    <input class="menu-btn hidden" type="checkbox" id="menu-btn">
+    <label class="menu-icon cursor-pointer float-right md:hidden inline-block relative select-none" for="menu-btn">
+      <span class="navicon bg-grey-darker block relative"></span>
+    </label>
+
+    <ul class="menu md:float-right list-reset m-0 overflow-hidden p-0">
+      {{- range .Site.Menus.main }}
+      <li class="border-t md:border-none md:float-left">
+        <a class="block no-underline hover:text-grey-darker{{ if or ( $.IsMenuCurrent "main" . ) ( $.HasMenuCurrent "main" . ) }} font-bold{{ end }}" href="{{ .URL }}">
+          {{ .Name }}
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </nav>
+</header>

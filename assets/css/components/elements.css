@@ -12,12 +12,12 @@ cite {
   font-style: italic;
 }
 hr {
-  background: #e6e6e6;
-  border: none;
   display: block;
   height: 1px;
-  margin-bottom: 1.4em;
   margin-top: 1.4em;
+  margin-bottom: 1.4em;
+  border: none;
+  background: #e6e6e6;
 }
 img {
   max-width: 100%;
@@ -85,44 +85,44 @@ h6:first-child {
   margin-top: 0;
 }
 h1 {
-  font-size: 2.4em;
-  margin-bottom: .58333em;
   margin-top: .58333em;
+  margin-bottom: .58333em;
+  font-size: 2.4em;
   line-height: 1;
 }
 h2 {
-  font-size: 1.6em;
-  margin-bottom: .875em;
   margin-top: 1.75em;
+  margin-bottom: .875em;
+  font-size: 1.6em;
   line-height: 1.1;
 }
 h3 {
-  font-size: 1.3em;
-  margin-bottom: 1.07692em;
   margin-top: 1.07692em;
+  margin-bottom: 1.07692em;
+  font-size: 1.3em;
 }
 h4 {
-  font-size: 1.2em;
-  margin-bottom: 1.16667em;
   margin-top: 1.16667em;
+  margin-bottom: 1.16667em;
+  font-size: 1.2em;
 }
 h5 {
-  font-size: 1.1em;
-  margin-bottom: 1.27273em;
   margin-top: 1.27273em;
+  margin-bottom: 1.27273em;
+  font-size: 1.1em;
 }
 h6 {
-  font-size: 1em;
-  margin-bottom: 1.4em;
   margin-top: 1.4em;
+  margin-bottom: 1.4em;
+  font-size: 1em;
 }
 dd {
   margin-left: 1.4em;
 }
 ol,
 ul {
-  list-style-position: outside;
   margin-left: 1.4em;
+  list-style-position: outside;
 }
 ol {
   list-style-type: decimal;
@@ -161,8 +161,8 @@ ul ul ul ul ul ul {
   list-style-type: circle;
 }
 blockquote {
-  border-left: 4px solid #e6e6e6;
   padding: .6em 1.2em;
+  border-left: 4px solid #e6e6e6;
 }
 blockquote p {
   margin-bottom: 0;
@@ -171,23 +171,23 @@ code,
 kbd,
 samp,
 pre {
-  -moz-osx-font-smoothing: auto;
-  -webkit-font-smoothing: auto;
   background-color: #f2f2f2;
   color: #333;
   font-size: .9em;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: auto;
 }
 code,
 kbd,
 samp {
+  padding: .1em .4em .2em;
   border-radius: 3px;
   line-height: 1.77778;
-  padding: .1em .4em .2em;
   vertical-align: baseline;
 }
 pre {
-  overflow: auto;
   padding: 1em 1.2em;
+  overflow: auto;
 }
 pre code {
   background: none;
@@ -205,8 +205,8 @@ figure:last-child {
   margin-bottom: 0;
 }
 figcaption {
-  font-size: .8em;
   margin-top: .875em;
+  font-size: .8em;
   text-align: left;
 }
 table {
@@ -217,9 +217,9 @@ table pre {
 }
 th,
 td {
-  font-size: 1em;
   padding: .7em;
   border: 1px solid #e6e6e6;
+  font-size: 1em;
   line-height: 1.4;
 }
 thead tr,
@@ -230,8 +230,8 @@ thead th,
 thead td,
 tfoot th,
 tfoot td {
-  font-size: .9em;
   padding: .77778em;
+  font-size: .9em;
 }
 thead th code,
 thead td code,

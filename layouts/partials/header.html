@@ -1,7 +1,7 @@
 <header class="flex">
   <nav class="nav w-full z-10">
     <a href="/" class="logo block float-left font-bold no-underline">
-      {{ .Site.Title }}
+      {{- .Site.Title -}}
     </a>
 
     <input class="menu-btn hidden" type="checkbox" id="menu-btn">
@@ -12,8 +12,8 @@
     <ul class="menu md:float-right list-reset m-0 overflow-hidden p-0">
       {{- range .Site.Menus.main }}
       <li class="border-t md:border-none md:float-left">
-        <a class="block no-underline hover:text-grey-darker{{ if or ( $.IsMenuCurrent "main" . ) ( $.HasMenuCurrent "main" . ) }} font-bold{{ end }}" href="{{ .URL }}">
-          {{ .Name }}
+        <a class="block no-underline{{ if or ( $.IsMenuCurrent "main" . ) ( $.HasMenuCurrent "main" . ) }} font-bold{{ end }}" href="{{ .URL }}">
+          {{- .Title -}}
         </a>
       </li>
       {{ end }}

@@ -16,16 +16,16 @@
 }
 
 .navicon {
+  width: 18px;
   height: 2px;
   transition: background .2s ease-out;
-  width: 18px;
 }
 
 .navicon:before,
 .navicon:after {
-  @apply absolute bg-grey-darker block h-full w-full;
-  content: '';
   transition: all .2s ease-out;
+  content: '';
+  @apply absolute bg-grey-darker block h-full w-full;
 }
 
 .navicon:before {
@@ -67,7 +67,7 @@
     padding-left: 10px;
   }
   .nav .menu {
-    clear: none;
     display: block !important;
+    clear: none;
   }
 }

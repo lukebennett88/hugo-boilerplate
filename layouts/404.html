@@ -1,38 +1,9 @@
 {{ define "title" }}Oops!{{ end }}
 
 {{ define "main" }}
-<main class="max-w-md my-32 px-4 md:px-20 w-full">
-
-  <!-- CARD -->
-  <div class="bg-white border flex flex-col golden-ratio items-center justify-center relative rounded-lg shadow-lg">
-
-    <!-- HEART -->
-    <div class="absolute flex flex-col items-center leading-none mx-3 my-8 pin-l pin-t text-3xl">
-      <p class="mb-0">A</p>
-      <p class="text-red">♥︎</p>
-    </div>
-    <!-- END HEART -->
-
-    <!-- 404 -->
-    <div class="bg-grey-lightest border leading-tight px-4 py-8 w-2/3">
-      <h1 class="font-serif leading-none text-4xl text-center">
-        404
-      </h1>
-      <p class="font-bold text-center text-grey-darker">Page not found</p>
-      <p class="text-grey-darker">Well this is awkward, there's nothing here...</p>
-      <p class="text-grey-darker">Maybe try going <a href="/">back to the home page?</a></p>
-    </div>
-    <!-- END 404 -->
-
-    <!-- HEART -->
-    <div class="absolute flex flex-col items-center leading-none mx-3 my-8 pin-b pin-r text-3xl upside-down">
-      <p class="mb-0">Q</p>
-      <p class="text-red">♥︎</p>
-    </div>
-    <!-- END HEART -->
-
-  </div>
-  <!-- END CARD -->
-
+<main class="max-w-md mx-auto my-8 px-4 py-8 w-full">
+  <h1>404: page not found</h1>
+  <p>Well this is awkward, there's nothing here...</p>
+  <p>Maybe try going <a href="/">back to the home page?</a></p>
 </main>
 {{ end }}

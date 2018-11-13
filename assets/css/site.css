@@ -14,6 +14,6 @@ a:hover {
   @apply text-grey-darker;
 }
 
-img {
+p img {
   max-width: 100%;
 }

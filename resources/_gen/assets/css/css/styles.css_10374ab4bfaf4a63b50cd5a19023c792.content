@@ -1091,6 +1091,14 @@ footer {
   outline: none;
 }
 
+main a {
+  font-weight: 700;
+}
+
+a:hover {
+  color: #606f7b;
+}
+
 .list-reset {
   list-style: none;
   padding: 0;

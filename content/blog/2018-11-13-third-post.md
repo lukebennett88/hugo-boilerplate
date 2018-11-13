@@ -6,3 +6,5 @@ image: /img/uploads/un-monsieur-truste-en-costume.png
 layout: single
 ---
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut voluptatum atque temporibus, fugiat sapiente id quia deserunt repellendus minus ipsam labore eaque neque corrupti nemo in est modi, sequi vel!
+
+![Un Monsieur Triste En Costume](/img/uploads/un-monsieur-truste-en-costume.png)

@@ -1,4 +1,4 @@
-baseurl           = "/"
+baseurl           = "https://hugo-starter.netlify.com"
 disableKinds      = ["RSS", "taxonomy", "taxonomyTerm"]
 languageCode      = "en-AU"
 title             = "Hugo Boilerplate"

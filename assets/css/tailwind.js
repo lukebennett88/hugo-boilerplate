@@ -24,7 +24,7 @@ View the full documentation at https://tailwindcss.com.
 |
 */
 
-// let defaultConfig = require('tailwindcss/defaultConfig')()
+let defaultConfig = require("tailwindcss/defaultConfig")();
 
 /*
 |-------------------------------------------------------------------------------
@@ -42,7 +42,7 @@ View the full documentation at https://tailwindcss.com.
 |
 */
 
-const colors = {
+let colors = {
   transparent: "transparent",
 
   black: "#22292f",
@@ -142,7 +142,7 @@ module.exports = {
   |
   */
 
-  colors,
+  colors: colors,
 
   /*
   |-----------------------------------------------------------------------------
@@ -190,7 +190,6 @@ module.exports = {
 
   fonts: {
     sans: [
-      "Rubik",
       "system-ui",
       "BlinkMacSystemFont",
       "-apple-system",
@@ -205,7 +204,6 @@ module.exports = {
       "sans-serif"
     ],
     serif: [
-      "Playfair Display",
       "Constantia",
       "Lucida Bright",
       "Lucidabright",
@@ -385,10 +383,10 @@ module.exports = {
 
   borderWidths: {
     default: "1px",
-    0: "0",
-    2: "2px",
-    4: "4px",
-    8: "8px"
+    "0": "0",
+    "2": "2px",
+    "4": "4px",
+    "8": "8px"
   },
 
   /*
@@ -457,20 +455,20 @@ module.exports = {
   width: {
     auto: "auto",
     px: "1px",
-    1: "0.25rem",
-    2: "0.5rem",
-    3: "0.75rem",
-    4: "1rem",
-    5: "1.25rem",
-    6: "1.5rem",
-    8: "2rem",
-    10: "2.5rem",
-    12: "3rem",
-    16: "4rem",
-    24: "6rem",
-    32: "8rem",
-    48: "12rem",
-    64: "16rem",
+    "1": "0.25rem",
+    "2": "0.5rem",
+    "3": "0.75rem",
+    "4": "1rem",
+    "5": "1.25rem",
+    "6": "1.5rem",
+    "8": "2rem",
+    "10": "2.5rem",
+    "12": "3rem",
+    "16": "4rem",
+    "24": "6rem",
+    "32": "8rem",
+    "48": "12rem",
+    "64": "16rem",
     "1/2": "50%",
     "1/3": "33.33333%",
     "2/3": "66.66667%",
@@ -504,21 +502,20 @@ module.exports = {
   height: {
     auto: "auto",
     px: "1px",
-    1: "0.25rem",
-    2: "0.5rem",
-    3: "0.75rem",
-    4: "1rem",
-    5: "1.25rem",
-    6: "1.5rem",
-    8: "2rem",
-    10: "2.5rem",
-    12: "3rem",
-    16: "4rem",
-    24: "6rem",
-    32: "8rem",
-    48: "12rem",
-    64: "16rem",
-    176: "44rem",
+    "1": "0.25rem",
+    "2": "0.5rem",
+    "3": "0.75rem",
+    "4": "1rem",
+    "5": "1.25rem",
+    "6": "1.5rem",
+    "8": "2rem",
+    "10": "2.5rem",
+    "12": "3rem",
+    "16": "4rem",
+    "24": "6rem",
+    "32": "8rem",
+    "48": "12rem",
+    "64": "16rem",
     full: "100%",
     screen: "100vh"
   },
@@ -538,7 +535,7 @@ module.exports = {
   */
 
   minWidth: {
-    0: "0",
+    "0": "0",
     full: "100%"
   },
 
@@ -557,7 +554,7 @@ module.exports = {
   */
 
   minHeight: {
-    0: "0",
+    "0": "0",
     full: "100%",
     screen: "100vh"
   },
@@ -626,20 +623,20 @@ module.exports = {
 
   padding: {
     px: "1px",
-    0: "0",
-    1: "0.25rem",
-    2: "0.5rem",
-    3: "0.75rem",
-    4: "1rem",
-    5: "1.25rem",
-    6: "1.5rem",
-    8: "2rem",
-    10: "2.5rem",
-    12: "3rem",
-    16: "4rem",
-    20: "5rem",
-    24: "6rem",
-    32: "8rem"
+    "0": "0",
+    "1": "0.25rem",
+    "2": "0.5rem",
+    "3": "0.75rem",
+    "4": "1rem",
+    "5": "1.25rem",
+    "6": "1.5rem",
+    "8": "2rem",
+    "10": "2.5rem",
+    "12": "3rem",
+    "16": "4rem",
+    "20": "5rem",
+    "24": "6rem",
+    "32": "8rem"
   },
 
   /*
@@ -660,20 +657,20 @@ module.exports = {
   margin: {
     auto: "auto",
     px: "1px",
-    0: "0",
-    1: "0.25rem",
-    2: "0.5rem",
-    3: "0.75rem",
-    4: "1rem",
-    5: "1.25rem",
-    6: "1.5rem",
-    8: "2rem",
-    10: "2.5rem",
-    12: "3rem",
-    16: "4rem",
-    20: "5rem",
-    24: "6rem",
-    32: "8rem"
+    "0": "0",
+    "1": "0.25rem",
+    "2": "0.5rem",
+    "3": "0.75rem",
+    "4": "1rem",
+    "5": "1.25rem",
+    "6": "1.5rem",
+    "8": "2rem",
+    "10": "2.5rem",
+    "12": "3rem",
+    "16": "4rem",
+    "20": "5rem",
+    "24": "6rem",
+    "32": "8rem"
   },
 
   /*
@@ -693,20 +690,20 @@ module.exports = {
 
   negativeMargin: {
     px: "1px",
-    0: "0",
-    1: "0.25rem",
-    2: "0.5rem",
-    3: "0.75rem",
-    4: "1rem",
-    5: "1.25rem",
-    6: "1.5rem",
-    8: "2rem",
-    10: "2.5rem",
-    12: "3rem",
-    16: "4rem",
-    20: "5rem",
-    24: "6rem",
-    32: "8rem"
+    "0": "0",
+    "1": "0.25rem",
+    "2": "0.5rem",
+    "3": "0.75rem",
+    "4": "1rem",
+    "5": "1.25rem",
+    "6": "1.5rem",
+    "8": "2rem",
+    "10": "2.5rem",
+    "12": "3rem",
+    "16": "4rem",
+    "20": "5rem",
+    "24": "6rem",
+    "32": "8rem"
   },
 
   /*
@@ -749,12 +746,12 @@ module.exports = {
 
   zIndex: {
     auto: "auto",
-    0: 0,
-    10: 10,
-    20: 20,
-    30: 30,
-    40: 40,
-    50: 50
+    "0": 0,
+    "10": 10,
+    "20": 20,
+    "30": 30,
+    "40": 40,
+    "50": 50
   },
 
   /*
@@ -771,11 +768,11 @@ module.exports = {
   */
 
   opacity: {
-    0: "0",
-    25: ".25",
-    50: ".5",
-    75: ".75",
-    100: "1"
+    "0": "0",
+    "25": ".25",
+    "50": ".5",
+    "75": ".75",
+    "100": "1"
   },
 
   /*
@@ -826,6 +823,7 @@ module.exports = {
   |   - responsive
   |   - hover
   |   - focus
+  |   - focus-within
   |   - active
   |   - group-hover
   |
@@ -860,6 +858,8 @@ module.exports = {
     minHeight: ["responsive"],
     minWidth: ["responsive"],
     negativeMargin: ["responsive"],
+    objectFit: false,
+    objectPosition: false,
     opacity: ["responsive"],
     outline: ["focus"],
     overflow: ["responsive"],
@@ -900,8 +900,8 @@ module.exports = {
 
   plugins: [
     require("tailwindcss/plugins/container")({
-      center: true,
-      padding: "1rem"
+      // center: true,
+      // padding: '1rem',
     })
   ],
 

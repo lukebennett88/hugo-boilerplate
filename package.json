@@ -5,11 +5,11 @@
     "url": "https://lukebennett.me"
   },
   "dependencies": {
-    "@fullhuman/postcss-purgecss": "^1.1.0",
-    "autoprefixer": "^9.3.1",
-    "postcss": "^7.0.5",
+    "@fullhuman/postcss-purgecss": "^1.0.1",
+    "autoprefixer": "^9.0.1",
+    "postcss": "^7.0.1",
     "postcss-cli": "^6.0.1",
-    "postcss-import": "^12.0.1",
+    "postcss-import": "^11.0.0",
     "tailwindcss": "^0.7.2"
   },
   "description": "Get up a new Hugo site up and running quickly",
@@ -19,6 +19,6 @@
   "repository": "https://github.com/lukebennett88/hugo-boilerplate",
   "scripts": {
     "develop": "hugo server -D",
-    "start": "hugo --minify"
+    "start": "hugo --gc --minify"
   }
 }

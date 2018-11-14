@@ -13,7 +13,3 @@ main a {
 a:hover {
   @apply text-grey-darker;
 }
-
-p img {
-  max-width: 100%;
-}

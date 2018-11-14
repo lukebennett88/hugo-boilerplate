@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-
   <title>
     {{- block "title" . }}
     {{- if .Title }}
@@ -23,8 +22,7 @@
   {{- .Site.Params.SiteDescription }}
   {{- end }}
   {{- end -}}">
-
-  <!-- SEO -->
+  {{/* SEO */}}
   <meta name="robots" content="index, follow">
   {{ .Hugo.Generator }}
   <link rel="canonical" href="{{ .URL | absURL }}">
@@ -32,19 +30,22 @@
   <meta name="twitter:site" content="{{ .Site.Params.twitter }}">
   <meta name="twitter:url" property="og:url" content="{{ .URL | absURL }}">
   <meta name="twitter:title" property="og:title" content="
-  {{- if eq .IsHome true }}
-  {{- .Site.Title }}
-  {{- else }}
-  {{- .Title }} | {{ .Site.Title }}
+  {{- block "title" . }}{{- end -}}
+  ">
+  <meta name="twitter:description" property="og:description" content="
+  {{- block "description" . }}{{- end -}}
+  ">
+  <meta name="twitter:image" property="og:image" content="
+  {{- if eq .Type "page" -}}
+  {{- .Site.BaseURL }}img/logo.png
+  {{- else -}}
+  {{ .Site.BaseURL }}{{ .Params.image }}
   {{- end -}}
   ">
-  <meta name="twitter:description" property="og:description" content="{{ .Site.Params.siteDescription }}">
-  <meta name="twitter:image" property="og:image" content="{{ .URL | absURL }}img/logo.png">
-
-  <!-- Favicons -->
-  <link rel="icon" type="image/png" href="{{ .URL | absURL }}img/favicon.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ .URL | absURL }}img/apple-touch-icon-180x180.png">
-
+  {{/* Favicons */}}
+  <link rel="icon" type="image/png" href="{{- .Site.BaseURL }}img/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{- .Site.BaseURL }}img/apple-touch-icon-180x180.png">
+  {{/* Styles */}}
   {{ partial "stylesheet" . }}
   {{- block "head" . }}{{ end }}
 </head>

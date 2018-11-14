@@ -1,7 +1,7 @@
 ---
 title: Third post
 date: 2018-11-13T11:11:01.920Z
-description: What does this do?
+description: Detailed sample post for styling a website
 image: /img/uploads/un-monsieur-truste-en-costume.png
 layout: single
 ---

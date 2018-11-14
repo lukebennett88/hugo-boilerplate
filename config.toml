@@ -4,7 +4,7 @@ languageCode      = "en-AU"
 title             = "Hugo Boilerplate"
 
 [params]
-  siteDescription = ""
+  siteDescription = "A boilerplate Hugo site to get you up and running quickly"
   phone           = ""
   email           = ""
   facebook        = ""

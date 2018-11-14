@@ -971,10 +971,6 @@ a:hover {
   color: #606f7b;
 }
 
-p img {
-  max-width: 100%;
-}
-
 .list-reset {
   list-style: none;
   padding: 0;

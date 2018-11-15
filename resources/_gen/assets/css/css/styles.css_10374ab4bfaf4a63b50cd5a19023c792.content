@@ -542,7 +542,7 @@ table {
 }
 
 .nav .logo {
-  padding: 15.5px 20px;
+  padding: 20px;
 }
 
 .nav .menu {

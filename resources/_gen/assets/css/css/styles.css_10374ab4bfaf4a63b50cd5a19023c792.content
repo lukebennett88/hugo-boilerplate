@@ -538,11 +538,11 @@ table {
 /* Site Specific */
 
 .nav li a {
-  padding: 20px;
+  padding: 1.25rem;
 }
 
 .nav .logo {
-  padding: 20px;
+  padding: 1.25rem;
 }
 
 .nav .menu {
@@ -557,8 +557,8 @@ table {
 }
 
 .navicon {
-  width: 18px;
-  height: 2px;
+  width: 1.125em;
+  height: .125em;
   -webkit-transition: background .2s ease-out;
   -o-transition: background .2s ease-out;
   transition: background .2s ease-out;
@@ -571,7 +571,7 @@ table {
   transition: all .2s ease-out;
   content: '';
   position: absolute;
-  background-color: #606f7b;
+  background-color: #3d4852;
   display: block;
   height: 100%;
   width: 100%;
@@ -617,11 +617,6 @@ table {
 }
 
 @media (min-width: 48em) {
-  .nav li a {
-    padding: 20px 20px;
-    padding-left: 10px;
-  }
-
   .nav .menu {
     display: block !important;
     clear: none;

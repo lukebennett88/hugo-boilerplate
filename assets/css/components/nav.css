@@ -1,9 +1,9 @@
 .nav li a {
-  padding: 20px;
+  @apply p-5;
 }
 
 .nav .logo {
-  padding: 20px;
+  @apply p-5;
 }
 
 .nav .menu {
@@ -16,8 +16,8 @@
 }
 
 .navicon {
-  width: 18px;
-  height: 2px;
+  width: 1.125em;
+  height: .125em;
   transition: background .2s ease-out;
 }
 
@@ -25,7 +25,7 @@
 .navicon:after {
   transition: all .2s ease-out;
   content: '';
-  @apply absolute bg-grey-darker block h-full w-full;
+  @apply absolute bg-grey-darkest block h-full w-full;
 }
 
 .navicon:before {
@@ -62,10 +62,6 @@
 }
 
 @media (min-width: 48em) {
-  .nav li a {
-    padding: 20px 20px;
-    padding-left: 10px;
-  }
   .nav .menu {
     display: block !important;
     clear: none;

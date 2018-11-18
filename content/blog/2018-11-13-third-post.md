@@ -1,6 +1,6 @@
 ---
 title: Third post
-date: 2018-11-13T11:11:01.920Z
+date: 2018-11-13
 description: Detailed sample post for styling a website
 image: /img/uploads/un-monsieur-truste-en-costume.png
 layout: single

@@ -1,10 +1,10 @@
 /* Base - Variables: tailwind-config.js */
 /* purgecss start ignore */
-@import 'tailwindcss/preflight';
+@import "tailwindcss/preflight";
 /* purgecss end ignore */
-@import 'tailwindcss/components';
+@import "tailwindcss/components";
 /* Site Specific */
 /* purgecss start ignore */
-@import 'site';
+@import "site";
 /* purgecss end ignore */
-@import 'tailwindcss/utilities';
+@import "tailwindcss/utilities";

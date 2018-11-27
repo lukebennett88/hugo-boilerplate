@@ -1,6 +1,6 @@
-@import 'components/nav.css';
-@import 'components/elements.css';
-@import 'components/grid.css';
+@import "components/nav.css";
+@import "components/elements.css";
+@import "components/grid.css";
 
 :focus:not(:focus-visible) {
   outline: none;

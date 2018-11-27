@@ -5,9 +5,11 @@
 
 <body class="antialiased text-grey-darkest">
   {{ partial "header" . }}
-  {{ block "main" . }}{{ end }}
+  <main class="flex flex-col max-w-md mx-auto my-8 px-4 py-8 w-full">
+    {{ block "main" . }}{{ end }}
+  </main>
   {{ partial "footer" . }}
-  {{- block "script" . }}{{ end }}
+  {{ block "script" . }}{{ end }}
 </body>
 
 </html>

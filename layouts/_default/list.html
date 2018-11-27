@@ -1,22 +1,18 @@
 {{ define "main" }}
-<main class="flex flex-col max-w-md mx-auto my-8 px-4 py-8 w-full">
   <h1>{{ .Title }}</h1>
-  <hr>
+  <hr />
   <ul class="list-reset m-0">
-    {{- range .Pages }}
+    {{ range.Pages }}
     <li>
       <article>
         <h2>
-          <a href="{{ .URL }}">
-            {{- .Title -}}
-          </a>
+          <a href="{{ .URL }}">{{ .Title }}</a>
         </h2>
         {{ .Content }}
       </article>
     </li>
-    <br>
-    <hr>
-    {{- end }}
+    <br />
+    <hr />
+    {{ end }}
   </ul>
-</main>
 {{ end }}

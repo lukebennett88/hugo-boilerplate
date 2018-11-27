@@ -1,7 +1,7 @@
 @media (max-width: 767px) {
   .navicon {
     width: 1.125em;
-    height: .125em;
+    height: 0.125em;
   }
 
   .navicon::before,
@@ -10,17 +10,17 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    transition: all .2s ease-out;
-    content: '';
-    @apply bg-grey-darkest;
+    transition: all 0.2s ease-out;
+    content: "";
+    @apply bg-grey-darker;
   }
 
   .navicon::before {
-    top: 5px;
+    top: 0.375em;
   }
 
   .navicon::after {
-    top: -5px;
+    top: -0.375em;
   }
 
   .menu-btn:not(:checked) ~ .menu {

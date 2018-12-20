@@ -5,7 +5,7 @@ description: Detailed sample post for styling a website
 image: /img/uploads/un-monsieur-truste-en-costume.png
 layout: single
 ---
-This is a style sample for a hugo boilerplate website made by [Luke Bennett](https://lukebennett.me). The purpose of this post is to make it easier to style the website by showing all of the common HTML elements in one place.
+This is a style sample for a hugo boilerplate website made by [Luke Bennett](https://lukebennett.com.au). The purpose of this post is to make it easier to style the website by showing all of the common HTML elements in one place.
 
 This paragraph is for checking line length and showing how text wraps. It has to be very long so that it will wrap even on wide screen devices. Is the text very legible? Should it be larger or smaller? Maybe a different typeface? What about line height of paragraphs, a little too much is better than not enough. Check the margin and padding while you're at it.
 
@@ -55,7 +55,12 @@ Further paragraphs of text. And yet more text. A bit more text too, for good mea
 
 Here’s a screenshot-type image, with a caption:
 
-{{< figure src="https://mattgemmell.com/images/mail_favorite_mailboxes/mail_move_to_favorite.jpg" title="A caption goes here." >}}
+<figure>
+  <img src="/img/apple-touch-icon-180x180.png">
+  <figcaption>
+    <h4>A caption goes here.</h4>
+  </figcaption>
+</figure>
 
 Further paragraphs of text. And yet more text, followed by a horizontal rule.
 
@@ -90,5 +95,3 @@ Former members
 | Joey Castillo     | drums, percussion                     | `2002 – 2012` |
 | Alain Johannes    | bass, backing vocals, guitars         | `2005 – 2007` |
 | Natasha Shneider  | keyboards, backing vocals             | `2005 – 2006` |
-
-

@@ -5,12 +5,12 @@
     "url": "https://lukebennett.com.au"
   },
   "dependencies": {
-    "@fullhuman/postcss-purgecss": "^1.1.0",
-    "autoprefixer": "^9.3.1",
-    "postcss": "^7.0.6",
-    "postcss-cli": "^6.0.1",
+    "@fullhuman/postcss-purgecss": "^1.2.0",
+    "autoprefixer": "^9.6.0",
+    "postcss": "^7.0.17",
+    "postcss-cli": "^6.1.2",
     "postcss-import": "^12.0.1",
-    "tailwindcss": "^0.7.2"
+    "tailwindcss": "^0.7.4"
   },
   "description": "Get up a new Hugo site up and running quickly",
   "license": "MIT",
